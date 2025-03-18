@@ -9,5 +9,11 @@ RSpec.describe StringCalculatorService, type: :service do
         expect(string_calculator.add("")).to eq(0)
       end
     end
+
+    context 'when input is a single number' do
+      it 'returns the number itself' do
+        expect(string_calculator.add("18")).to eq(18)
+      end
+    end
   end
 end
