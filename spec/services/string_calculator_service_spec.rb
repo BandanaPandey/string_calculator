@@ -15,5 +15,11 @@ RSpec.describe StringCalculatorService, type: :service do
         expect(string_calculator.add("18")).to eq(18)
       end
     end
+
+    context 'when input is multiple numbers' do
+      it 'returns the sum of the numbers' do
+        expect(string_calculator.add("18,3,2025")).to eq(2046)
+      end
+    end
   end
 end
