@@ -52,10 +52,8 @@
 To use the `StringCalculatorService` service with different cases explicitly:
 
 **Run console:**
-
-    ```bash
-    rails c
-    ```
+`rails c`
+   
 
 ```ruby
 string_calculator = StringCalculatorService.new
@@ -67,18 +65,9 @@ Returns: 5
 ## Following Testcases has been covered
 StringCalculatorService
   #add
-    when input is an empty string
-      returns 0
-    when input is a single number
-      returns the number itself for input 18
-      returns the number itself for input 1
-    when input is multiple numbers
-      returns the sum of the numbers for input:(18,3,2025)
-      returns the sum of the numbers for input:(1,2,3)
-    when input contains new lines between numbers
-      returns the sum of the numbers
-    when input contains custom delimiter
-      returns the sum of the numbers when delimiter is ;
-      returns the sum of the numbers when delimiter is +
-    when input contains negative numbers
-      throws exception message with all negative numbers
+  - When input is an empty strind: returns 0
+  - When input is a single number: returns the number itself
+  - When input is multiple numbers: returns the sum of the numbers
+  - When input contains new lines between numbers: returns the sum of the numbers
+  - When input contains custom delimiter: returns the sum of the numbers
+  - When input contains negative numbers: throws exception message with all negative numbers
