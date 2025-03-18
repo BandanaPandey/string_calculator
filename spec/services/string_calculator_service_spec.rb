@@ -45,5 +45,11 @@ RSpec.describe StringCalculatorService, type: :service do
         expect(string_calculator.add("//+\n1+2")).to eq(3)
       end
     end
+
+    context 'when input contains negative numbers' do
+      it 'throws exception message with all negative numbers' do
+        expect { string_calculator.add("//;\n1;-2;4;-7") }.to raise_error(RuntimeError, "negatives are not allowed: -2,-7")
+      end
+    end
   end
 end
